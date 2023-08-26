@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Karla:wght@200;300;400;700&display=swap');
+
+:root{
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 18px;
+        --clr-red:hsl(0, 100%, 67%);
+        --clr-yellow: hsl(39, 100%, 56%);
+        --clr-teal: hsl(166, 100%, 37%);
+        --clr-blue: hsl(234, 85%, 45%);
+        --grad-bg-1: hsl(252, 100%, 67%);
+        --grad-bg-2: hsl(241, 81%, 54%);
+        --grad-blue-circle-1: hsla(256, 72%, 46%, 1);
+        --grad-blue-circle-2: hsla(241, 72%, 46%, 0);
+        --clr-n-white: hsl(0, 0%, 100%);
+        --clr-n-light-blue: hsl(221, 100%, 96%);
+        --clr-n-lavander: hsl(241, 100%, 89%);
+        --clr-n-dark-blue: hsl(224, 30%, 27%);
+        --clr-n-gray: hsl(0, 0%, 61%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+}
+
+.result{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(var(--grad-bg-1), var(--grad-bg-2) );
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 1rem;
+}
+
+.result h1{
+    font-size: inherit;
+    color: var(--clr-n-lavander);
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.result-circle{
+    display: flex;
+    flex-flow: column ;
+    background-image: linear-gradient(var(--grad-blue-circle-1), var(--grad-blue-circle-2));
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-circle h2{
+    font-size: 3rem;
+    color: var(--clr-n-white);
+    font-weight: 700;
+}
+
+.result-circle p{
+    color: var(--clr-n-lavander);
+    font-weight: 300;
+}
+
+.result-description{
+    padding: 1rem;
+    text-align: center;
+}
+
+.result-description h2{
+    color: var(--clr-n-white);
+    padding: 0 0 0.5rem;
+    font-weight: 700;
+}
+
+.result-description p{
+    color: var(--clr-n-lavander);
+    font-weight: 300;
+}
+
+.summary{
+    display: flex;
+    padding: 1rem;
+    flex-flow: column;
+
+}
+
+.summary h2{
+    font-size: inherit;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.summary-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#red-bg{
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+#red-letter{
+    color: var(--clr-red);
+}
+
+#yellow-bg{
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+#yellow-letter{
+    color: var(--clr-yellow);
+}
+
+#green-bg{
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+#green-letter{
+    color: var(--clr-teal);
+}
+
+#blue-bg{
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+#blue-letter{
+    color: var(--clr-blue);
+}
+
+
+.summary-list-item{
+    display: flex;
+}
+
+.summary-list-item h3{
+    padding-left: 0.5rem;
+    font-size: inherit;
+}
+
+.summary-numbers{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.summary-numbers h5{
+    padding-left: 0.5rem;
+    color: var(--clr-n-gray);
+}
+
+.button-wrapper{
+    text-align: center;
+    margin: 0 1rem 1rem;
+    background-color: var(--clr-n-dark-blue);
+    border-radius: 2rem;
+}
+
+.button-wrapper :hover{
+    cursor: pointer;
+    background: linear-gradient(var(--grad-bg-1), var(--grad-bg-2));
+    border-radius: 2rem;
+}
+
+.button-wrapper h2{
+    max-width: 100%;
+    padding: 1rem;
+    font-size: inherit;
+    color: var(--clr-n-white);
+}
+
+footer{
+   position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+footer a{
+    color: var(--clr-n-dark-blue);
+}
+
+@media screen and (min-width: 600px){
+    body{
+        align-items: center;
+    }
+    
+    .wrapper{
+        flex-flow: row;
+        max-width: 50rem;
+        box-shadow: 0.3rem 0.3rem 2rem var(--clr-n-lavander);
+        border-radius: 2rem;
+    }
+
+    .result{
+        border-radius: 2rem;
+        max-width: 18rem;
+        flex: 1;
+    }
+
+    .summary{
+        max-width: 30rem;
+        flex: 1;
+    }
+}
