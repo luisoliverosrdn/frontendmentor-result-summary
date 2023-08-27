@@ -24,21 +24,17 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-}
-
-body{
+main{
     display: flex;
     min-height: 100vh;
+    align-content: center;
     justify-content: center;
 }
 
 .wrapper{
     display: flex;
     flex-flow: column;
-    max-width: 100%;
+    width: 100%;
 }
 
 .result{
@@ -55,7 +51,7 @@ body{
     font-size: inherit;
     color: var(--clr-n-lavander);
     font-weight: 300;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .result-circle{
@@ -81,7 +77,7 @@ body{
 }
 
 .result-description{
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
@@ -100,7 +96,7 @@ body{
     display: flex;
     padding: 1rem;
     flex-flow: column;
-
+    justify-content: center;
 }
 
 .summary h2{
@@ -191,7 +187,6 @@ body{
 }
 
 footer{
-   position: absolute;
     bottom: 0;
     text-align: center;
 }
@@ -201,25 +196,25 @@ footer a{
 }
 
 @media screen and (min-width: 600px){
-    body{
+    
+    main{
         align-items: center;
     }
-    
     .wrapper{
         flex-flow: row;
-        max-width: 50rem;
-        box-shadow: 0.3rem 0.3rem 2rem var(--clr-n-lavander);
+        max-width: 35rem;
+        max-height: 25rem;
+        box-shadow: 0.3rem 0.3rem 2rem hsla(241, 100%, 89%, 0.3);
         border-radius: 2rem;
     }
 
     .result{
         border-radius: 2rem;
-        max-width: 18rem;
         flex: 1;
     }
 
     .summary{
-        max-width: 30rem;
+      
         flex: 1;
     }
 }
